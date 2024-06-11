@@ -1,0 +1,344 @@
+<html>
+	<head>
+		<title>Myldberries</title>
+		<link rel="icon" type="image/x-icon" href="images-M/favicon.ico">
+		<link rel="stylesheet" href="CSS.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/ccf13ac9f1.js" crossorigin="anonymous"></script>
+	</head>
+	<header>
+
+		<a href="index.html">
+			<h1 >		
+				Myldberries		    
+			</h1>
+		</a>
+		<div class="lipton">
+			<input class="search" placeholder="Начните искать товары прямо сейчас!🎀"></input>
+		</div>
+	</header>
+	<main>
+		<nav class="inknut-antiqua-light">
+			<a href="login.html">
+				<div class="nav-item">
+					Войти/Авторизоваться
+				</div>
+			</a>
+			<a href="profile.html">
+				<div class="nav-item">
+					Профиль
+				</div >
+			</a>
+			<a href="help.html">
+				<div class="nav-item">
+					Помощь
+				</div>
+			</a>
+			<a href="reviews.html">
+				<div class="nav-item">
+					Отзывы
+				</div >
+			</a>
+			<a  href="korzina.html" onclick="localStorage.setItem('itemsInKart', itemsInKart)">
+				<div class="nav-item">
+					Корзина
+				</div >
+			</a>
+		</nav>
+		<div class="poster">
+			
+		</div>
+		<section class="chancellery">
+			<h2>Канцелярия</h2>
+			<div class="items">
+				<div class="row">
+					<article id="2"  class="card-item">
+						<img class="images-M" src ="images-M/Набор ручек.jpeg">
+						<p class="item-name">Набор ручек</p>
+						<p class="price">499р</p>
+						<button class="add-item">
+							<!-- <i class="fa-regular fa-cart-shopping" style="color: #ffffff;"></i> -->
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i>
+					</article>
+					<article id="1"class="card-item">
+						<img class="images-M" src ="images-M/клеи.jpeg">
+						<p class="item-name">Клей-лапка</p>
+						<p class="price">249р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i>
+					</article>
+					<article id="3" class="card-item"><img class="images-M" src ="images-M/текстовыделители.jpeg">
+						<p class="item-name">Тексто-выделители</p>
+						<p class="price">599р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="7" class="card-item"><img class="images-M" src ="images-M/ластики.jpeg">
+						<p class="item-name">Ластики</p>
+						<p class="price">199р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+			    </div>
+				<div class="row">
+					<article id="5" class="card-item"><img class="images-M" src ="images-M/блокноты.jpeg">
+						<p class="item-name">Набор блокнотов</p>
+						<p class="price">899р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="6" class="card-item"><img class="images-M" src ="images-M/канцелярские ножи.jpeg">
+						<p class="item-name">Мини-канцелярский <br/>ножик</p>
+						<p class="price">299р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="8" class="card-item"><img class="images-M" src ="images-M/скотчи.jpeg">
+						<p class="item-name">Скотч с наклейками</p>
+						<p class="price">599р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>						
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="4" class="card-item"><img class="images-M" src ="images-M/калькулятор.jpeg">
+						<p class="item-name">Мини-калькулятор</p>
+						<p class="price">399р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+				</div>	
+			</div>
+		</section>
+
+		<section class="clothes">
+			<h2>Одежда</h2>
+			<div class="items">
+				<div class="row">
+					<article id="9" class="card-item">
+						<img class="images-M" src ="images-M/белые джинсы карго.jpeg">
+						<p class="item-name">Штаны карго белые</p>
+						<p class="price">1499р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i>
+					</article>
+					<article id="10" class="card-item">
+						<img class="images-M" src ="images-M/фиолетовый свитер.jpeg">
+						<p class="item-name">Свитер фиолетовый</p>
+						<p class="price">949р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i>
+					</article>
+					<article id="11" class="card-item"><img class="images-M" src ="images-M/голубая кофта.jpeg">
+						<p class="item-name">Свитер с сумкой</p>
+						<p class="price">999р</p>                
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="12" class="card-item"><img class="images-M" src ="images-M/платье комбинезон.jpeg">
+						<p class="item-name">Кофта с платьем</p>
+						<p class="price">1199р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+			    </div>
+				<div class="row">
+					<article id="13" class="card-item"><img class="images-M" src ="images-M/кофта человек паук.jpeg">
+						<p class="item-name">Зипка человек-паук</p>
+						<p class="price">2199р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="14" class="card-item"><img class="images-M" src ="images-M/свитер.jpeg">
+						<p class="item-name">Полу-свитер белый</p>
+						<p class="price">699р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="15" class="card-item"><img class="images-M" src ="images-M/кофта розовая.jpeg">
+						<p class="item-name">Кофта розовая</p>
+						<p class="price">699р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+					<article id="16" class="card-item"><img class="images-M" src ="images-M/мини юбка.jpeg">
+						<p class="item-name">Мини-юбка </p>
+						<p class="price">699р</p>
+						<button class="add-item">
+							<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+						</button>
+						<i class="fa-solid fa-splotch" style="color: #ffed94;"></i></article>
+			    </div>	
+			</div>
+		</section>
+	</main> 
+	<footer>
+		<nav class="inknut-antiqua-light">
+			<a href="login.html">
+				<div class="nav-item">
+					Войти/Авторизоваться
+				</div>
+			</a>
+			<a href="profile.html">
+				<div class="nav-item">
+					Профиль
+				</div >
+			</a>
+			<a href="help.html">
+				<div class="nav-item">
+					Помощь
+				</div>
+			</a>
+			<a href="reviews.html">
+				<div class="nav-item">
+					Отзывы
+				</div >
+			</a>
+			<a  href="korzina.html" onclick="localStorage.setItem('itemsInKart', itemsInKart)">
+				<div class="nav-item">
+					Корзина
+				</div >
+			</a>
+		</nav>
+		<div class="heart">
+		<i class="fa-solid fa-heart" style="color: #ffa8df;"><h1 class="anonymous">О нас</h1>
+
+		</i>
+		 </div>
+		
+		
+		<div class="row-footer">
+			<a class="link" href="">Мы в телеграмме<i class="fa-brands fa-telegram" style="color: #74C0FC;"></i></a>
+			<a class="link" href="">Мы в ютубе<i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a>
+		</div>
+		<div class="row-footer">
+			<a class="link" href="">Мы в инстаграмме<i class="fa-brands fa-instagram" style="color: #ff3396;"></i></a>		
+			<a class="link" href="">Мы в вк<i class="fa-brands fa-vk" style="color: #74C0FC;"></i></a>
+		</div>
+		
+	</footer>
+	<script type="text/javascript">
+		goods = {
+	        1: {
+	            name: 'Клей-лапка',
+	            price: '249р',
+	            image: 'images-M/клеи.jpeg'
+	        },
+	        2: {
+	        	name:'Набор ручек',
+	        	price: '499р',
+	            image: 'images-M/Набор ручек.jpeg'
+	        },
+	        3: {
+	        	name:'Тексто-выделители',
+	        	price: '599р',
+	            image: 'images-M/текстовыделители.jpeg'
+	        },
+	        4: {
+	        	name:'Ластики',
+	        	price: '199р',
+	            image: 'images-M/ластики.jpeg'
+	        },
+	        5: {
+	        	name:'Набор блокнотов',
+	        	price: '899р',
+	            image: 'images-M/блокноты.jpeg'
+	        },
+	        6: {
+	        	name:'Мини-канцелярский ножик',
+	        	price: '299р',
+	            image: 'images-M/канцелярские ножи.jpeg'
+	        },
+	        7: {
+	        	name:'Ластики',
+	        	price: '199р',
+	            image: 'images-M/ластики.jpeg'
+	        },
+	        8: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         9: {
+	        	name:'Штаны карго белые',
+	        	price: '1499р',
+	            image: 'images-M/белые джинсы карго.jpeg'
+	        },
+	         10: {
+	        	name:'Свитер фиолетовый',
+	        	price: '949р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         11: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         12: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         13: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         14: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         15: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         16: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	    }
+		function addInCart(e){
+			if (e.target.parentNode.id=='')  {
+				itemsInKart.push(e.target.parentNode.parentNode.id)
+			}
+			else {
+				itemsInKart.push(e.target.parentNode.id)
+			}
+			console.log(itemsInKart)
+		}
+		
+		itemsInKart=[]
+		items=document.querySelectorAll('.add-item')
+		items.forEach(button => {
+			button.addEventListener('click',addInCart)
+		})
+	</script>
+
+</html>    
+<!-- <i class="fa-regular fa-cart-shopping" style="color: #ffffff;"></i> -->
+<!-- <i class="fa-solid fa-splotch" style="color: #ffed94;"></i> -->

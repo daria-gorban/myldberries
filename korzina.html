@@ -1,0 +1,232 @@
+<html>
+	<head>
+		<title>Myldberries</title>
+		<link rel="icon" type="image/x-icon" href="images-M/favicon.ico">
+		<link rel="stylesheet" href="CSS.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/ccf13ac9f1.js" crossorigin="anonymous"></script>
+	</head>
+	<header>
+		<a href="index.html">
+			<h1 >		
+				Myldberries		    
+			</h1>
+		</a>
+		<div class="lipton">
+			<input class="search" placeholder="Начните искать товары прямо сейчас!🎀"></input>
+		</div>
+	</header>
+	<main>
+		<nav class="inknut-antiqua-light">
+			<a href="login.html">
+				<div class="nav-item">
+					Войти/Авторизоваться
+				</div>
+			</a>
+			<a href="profile.html">
+				<div class="nav-item">
+					Профиль
+				</div >
+			</a>
+			<a href="help.html">
+				<div class="nav-item">
+					Помощь
+				</div>
+			</a>
+			<a href="reviews.html">
+				<div class="nav-item">
+					Отзывы
+				</div >
+			</a>
+			<a  href="korzina.html" onclick="localStorage.setItem('itemsInKart', itemsInKart)">
+				<div class="nav-item">
+					Корзина
+				</div >
+			</a>
+		</nav>
+		<div class="korzinadiva">
+			<h2 class="empty-korzina">Ваша корзина пуста! Отправляйтесь за покупками!</h2>
+		</div>
+	</main>
+		<script type="text/javascript">
+
+
+
+			goods = {
+	        1: {
+	            name: 'Клей-лапка',
+	            price: '249р',
+	            image: 'images-M/клеи.jpeg'
+	        },
+	        2: {
+	        	name:'Набор ручек',
+	        	price: '499р',
+	            image: 'images-M/Набор ручек.jpeg'
+	        },
+	        3: {
+	        	name:'Тексто-выделители',
+	        	price: '599р',
+	            image: 'images-M/текстовыделители.jpeg'
+	        },
+	        4: {
+	        	name:'Мини-калькулятор',
+	        	price: '199р',
+	            image: 'images-M/калькулятор.jpeg'
+	        },
+	        5: {
+	        	name:'Набор блокнотов',
+	        	price: '899р',
+	            image: 'images-M/блокноты.jpeg'
+	        },
+	        6: {
+	        	name:'Мини-канцелярский ножик',
+	        	price: '599р',
+	            image: 'images-M/канцелярские ножи.jpeg'
+	        },
+	        7: {
+	        	name:'Ластики',
+	        	price: '199р',
+	            image: 'images-M/ластики.jpeg'
+	        },
+	        8: {
+	        	name:'Скотч с наклейками',
+	        	price: '599р',
+	            image: 'images-M/скотчи.jpeg'
+	        },
+	         9: {
+	        	name:'Штаны карго белые',
+	        	price: '1499р',
+	            image: 'images-M/белые джинсы карго.jpeg'
+	        },
+	         10: {
+	        	name:'Свитер фиолетовый',
+	        	price: '949р',
+	            image: 'images-M/фиолетовый свитер.jpeg'
+	        },
+	         11: {
+	        	name:'Свитер с сумкой',
+	        	price: '999р',
+	            image: 'images-M/голубая кофта.jpeg'
+	        },
+	         12: {
+	        	name:'Кофта с платьем',
+	        	price: '1199р',
+	            image: 'images-M/платье комбинезон.jpeg'
+	        },
+	         13: {
+	        	name:'Зипка человек-паук',
+	        	price: '2199р',
+	            image: 'images-M/кофта человек паук.jpeg'
+	        },
+	         14: {
+	        	name:'Полу-свитер белый',
+	        	price: '699р',
+	            image: 'images-M/свитер.jpeg'
+	        },
+	         15: {
+	        	name:'Кофта розовая',
+	        	price: '699р',
+	            image: 'images-M/кофта розовая.jpeg'
+	        },
+	         16: {
+	        	name:'Мини-юбка',
+	        	price: '599р',
+	            image: 'images-M/мини юбка.jpeg'
+	        },
+	    }
+	    let ids =localStorage.getItem('itemsInKart') 
+	    let korzinadiva = document.querySelector('.korzinadiva')
+			console.log(ids.split(','))
+			if (ids=='') {
+				let empty = document.querySelector('.empty-korzina')
+				empty.setAttribute('style', 'display:block')
+			}
+			else {
+				let empty = document.querySelector('.empty-korzina')
+				empty.setAttribute('style', 'display:none')
+			}
+			ids.split(',').forEach(id=>{
+				if (id != ''){
+					let article = document.createElement("article")
+				article.className='card-item'
+				article.setAttribute('id',id) 
+				let image=document.createElement('img')
+				image.className='images-M'
+				image.setAttribute('src',goods[id].image)
+				let p = document.createElement('p')
+				p.className="item-name"
+				p.innerHTML=goods[id].name
+				let pprice = document.createElement('p')
+				pprice.className="price"
+				pprice.innerHTML=goods[id].price
+				let button = document.createElement('button')
+				button.className="add-item"
+				let i = document.createElement('i')
+				i.classList.add('fa-cart-shopping', 'fa-solid')
+				i.setAttribute('style','color: #ffffff;')
+				let i2 = document.createElement('i')
+				i2.setAttribute('style','color: #ffed94; ')
+				i2.classList.add('fa-splotch', 'fa-solid')
+
+				button.append(i)
+				article.append(image)
+				article.append(p)
+				article.append(pprice)
+				article.append(button)
+				article.append(i2)
+				korzinadiva.append(article)
+				}
+			})
+		</script>
+		<footer>
+		<nav class="inknut-antiqua-light">
+			<a href="login.html">
+				<div class="nav-item">
+					Войти/Авторизоваться
+				</div>
+			</a>
+			<a href="profile.html">
+				<div class="nav-item">
+					Профиль
+				</div >
+			</a>
+			<a href="help.html">
+				<div class="nav-item">
+					Помощь
+				</div>
+			</a>
+			<a href="reviews.html">
+				<div class="nav-item">
+					Отзывы
+				</div >
+			</a>
+			<a  href="korzina.html" onclick="localStorage.setItem('itemsInKart', itemsInKart)">
+				<div class="nav-item">
+					Корзина
+				</div >
+			</a>
+		</nav>
+		<div class="heart">
+		<i class="fa-solid fa-heart" style="color: #ffa8df;"><h1 class="anonymous">О нас</h1>
+
+		</i>
+		 </div>
+		
+		
+		<div class="row-footer">
+			<a class="link" href="">Мы в телеграмме<i class="fa-brands fa-telegram" style="color: #74C0FC;"></i></a>
+			<a class="link" href="">Мы в ютубе<i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a>
+		</div>
+		<div class="row-footer">
+			<a class="link" href="">Мы в инстаграмме<i class="fa-brands fa-instagram" style="color: #ff3396;"></i></a>		
+			<a class="link" href="">Мы в вк<i class="fa-brands fa-vk" style="color: #74C0FC;"></i></a>
+		</div>
+		
+	</footer>
+		<!-- <i class="fa-solid fa-check" style="color: #ffffff;"></i> -->
+		<!-- <i class="fa-regular fa-cloud" style="color: #B197FC;"></i> -->
